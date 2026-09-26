@@ -1,0 +1,255 @@
+.compose-window {
+  position: fixed;
+  bottom: 0;
+  right: 64px;
+  width: 580px;
+  height: 520px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: var(--shadow-flyout);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.compose-window.maximized {
+  width: 80vw;
+  max-width: 900px;
+  height: 75vh;
+  right: 10vw;
+}
+
+/* Minimized bar */
+.compose-minimized {
+  position: fixed;
+  bottom: 0;
+  right: 64px;
+  width: 280px;
+  height: 40px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: var(--shadow-md);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.compose-minimized:hover {
+  background: var(--bg-hover);
+}
+
+.compose-minimized-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compose-minimized-actions {
+  display: flex;
+  gap: 2px;
+}
+
+.compose-minimized-actions button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.compose-minimized-actions button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.compose-header {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.compose-header-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.compose-header-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.compose-ctrl-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.compose-ctrl-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .compose-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Fields */
+.compose-fields {
+  flex-shrink: 0;
+}
+
+.compose-field-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.compose-field-label {
+  width: 32px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.compose-field-input {
+  flex: 1;
+  height: 28px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.subject-input {
+  font-weight: 500;
+}
+
+.compose-ccbcc-toggle {
+  font-size: 12px;
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.compose-ccbcc-toggle:hover {
+  background: var(--primary-light);
+}
+
+/* Format bar */
+.compose-format-bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.format-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.format-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.format-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--border-color);
+  margin: 0 4px;
+}
+
+/* Body editor */
+.compose-body-editor {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: transparent;
+}
+
+/* Footer */
+.compose-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-top: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.compose-footer-left,
+.compose-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compose-send-btn {
+  height: 32px;
+  padding: 0 24px;
+  background: var(--primary);
+  color: var(--text-on-primary);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+  margin-right: 8px;
+}
+
+.compose-send-btn:hover {
+  background: var(--primary-hover);
+}
+
+.compose-icon-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.compose-icon-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}

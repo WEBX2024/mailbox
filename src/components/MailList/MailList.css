@@ -1,0 +1,102 @@
+.mail-list {
+  width: 360px;
+  min-width: 280px;
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* Tabs */
+.mail-list-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.mail-list-tab-group {
+  display: flex;
+  gap: 0;
+}
+
+.mail-list-tab {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.mail-list-tab:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.mail-list-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.mail-list-filter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary);
+  border-radius: 12px;
+  transition: all var(--transition-fast);
+}
+
+.mail-list-filter:hover {
+  background: var(--primary-light);
+}
+
+.mail-list-filter.active {
+  background: var(--primary);
+  color: var(--text-on-primary);
+}
+
+/* Scroll container */
+.mail-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Empty state */
+.mail-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.mail-list-empty svg {
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.mail-list-empty-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.mail-list-empty-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}

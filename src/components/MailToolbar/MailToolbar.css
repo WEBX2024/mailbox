@@ -1,0 +1,65 @@
+.mail-toolbar {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-base);
+  flex-shrink: 0;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolbar-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.toolbar-action-btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+}
+
+.toolbar-action-btn:active:not(:disabled) {
+  background: var(--bg-selected);
+}
+
+.toolbar-action-btn:disabled {
+  color: var(--text-muted);
+}
+
+.toolbar-btn-label {
+  display: inline;
+}
+
+@media (max-width: 900px) {
+  .toolbar-btn-label {
+    display: none;
+  }
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-color);
+  margin: 0 4px;
+}
+
+.toolbar-selection-info {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 0 8px;
+  white-space: nowrap;
+}

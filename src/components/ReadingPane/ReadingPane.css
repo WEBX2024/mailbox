@@ -1,0 +1,273 @@
+.reading-pane {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-base);
+  min-width: 0;
+}
+
+.reading-pane-empty {
+  background: var(--bg-subtle);
+}
+
+.reading-pane-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  text-align: center;
+  gap: 12px;
+}
+
+.reading-pane-placeholder svg {
+  opacity: 0.3;
+}
+
+.reading-pane-placeholder h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.reading-pane-placeholder p {
+  font-size: 13px;
+}
+
+/* Header */
+.reading-pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.reading-pane-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rp-action-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.rp-action-btn:hover {
+  background: var(--bg-hover);
+  color: var(--primary);
+}
+
+.rp-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-color);
+  margin: 0 4px;
+}
+
+/* Scroll content */
+.reading-pane-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 28px;
+}
+
+.rp-subject {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* Sender */
+.rp-sender-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rp-sender-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.rp-sender-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.rp-sender-line1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.rp-sender-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.rp-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.rp-sender-email {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.rp-recipients {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.rp-cc {
+  color: var(--text-muted);
+}
+
+/* Attachments */
+.rp-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.rp-attachment-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--bg-subtle);
+  transition: background var(--transition-fast);
+}
+
+.rp-attachment-chip:hover {
+  background: var(--bg-hover);
+}
+
+.rp-attachment-name {
+  font-weight: 500;
+}
+
+.rp-attachment-size {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.rp-attachment-download {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  margin-left: 4px;
+}
+
+.rp-attachment-download:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--primary);
+}
+
+/* Body */
+.rp-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  padding: 8px 0;
+}
+
+.rp-body p {
+  margin-bottom: 12px;
+}
+
+.rp-body ul, .rp-body ol {
+  margin-bottom: 12px;
+  padding-left: 24px;
+}
+
+.rp-body ul { list-style: disc; }
+.rp-body ol { list-style: decimal; }
+
+.rp-body li {
+  margin-bottom: 4px;
+}
+
+.rp-body a {
+  color: var(--primary);
+}
+
+.rp-body code {
+  background: var(--bg-subtle);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: 'Cascadia Code', 'Consolas', monospace;
+}
+
+.rp-body strong {
+  font-weight: 600;
+}
+
+/* Reply strip */
+.rp-reply-strip {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.rp-reply-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-base);
+  transition: all var(--transition-fast);
+}
+
+.rp-reply-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
